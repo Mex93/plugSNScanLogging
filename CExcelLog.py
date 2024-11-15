@@ -61,9 +61,6 @@ class CExcelLog:
             # print(cls._file_name)
             # print(cls._full_patch)
 
-        logging.basicConfig(level=logging.INFO, filename=cls._file_name_in_logging, filemode="a",
-                            format="%(asctime)s %(levelname)s %(message)s")
-
         full_date = f'{current_time.day:02}.{current_time.month:02}.{current_time.year} ' \
                     f'{current_time.hour:02}:{current_time.minute:02}:{current_time.second:02}'
 
@@ -73,6 +70,9 @@ class CExcelLog:
 
             if not os.path.isdir(f"{cls._BASE_FOLDER_NAME}/{cls._on_day_folder_name}"):
                 os.mkdir(f"{cls._BASE_FOLDER_NAME}/{cls._on_day_folder_name}" + "/")
+
+            logging.basicConfig(level=logging.INFO, filename=cls._file_name_in_logging, filemode="a",
+                                format="%(asctime)s %(levelname)s %(message)s")
 
             if os.path.exists(cls._full_patch) is False:
                 wb = Workbook()
