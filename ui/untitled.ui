@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1430</width>
+    <height>812</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1430</width>
+    <height>605</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Packing Scan Logging</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/res/images/logo.ico</normaloff>:/res/images/logo.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow 
+{
+	background-color: #2137fb;
+}
+
+QMenuBar
+{
+    background-color: #333399;
+    color: #999;
+};
+QMenuBar::item
+{
+    background-color: #333399;
+    color: #999;
+};
+QMenuBar::item::selected
+{
+    background-color: #3399cc;
+    color: #fff;
+};
+QMenu
+{
+    background-color: #3399cc;
+    color: #fff;
+};
+QMenu::item::selected
+{
+    background-color: #333399;
+    color: #999;
+};</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_7">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_model">
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+    border: 1px solid gray;
+    border-color: none;
+    margin-top: 60px;
+    font-size: 40px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px 150px;
+    background-color: #FF17365D;
+    color: rgb(255, 255, 255);
+}</string>
+          </property>
+          <property name="title">
+           <string>Устройство</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QLabel" name="label_vender">
+               <property name="font">
+                <font>
+                 <pointsize>60</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white</string>
+               </property>
+               <property name="text">
+                <string>TV Hartens</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_model">
+               <property name="font">
+                <font>
+                 <pointsize>60</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white</string>
+               </property>
+               <property name="text">
+                <string>HTM-55UHD05B-S2 UK</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QGroupBox" name="groupBox_date">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QGroupBox {
+    border: 1px solid gray;
+    border-color: none;
+    margin-top: 60px;
+    font-size: 40px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px 150px;
+    background-color: #FF17365D;
+    color: rgb(255, 255, 255);
+}</string>
+            </property>
+            <property name="title">
+             <string>Дата</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_date">
+               <property name="font">
+                <font>
+                 <pointsize>40</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white</string>
+               </property>
+               <property name="text">
+                <string>12.11.2024
+09:17:21</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QGroupBox {
+    border: 1px solid gray;
+    border-color: none;
+    margin-top: 60px;
+    font-size: 40px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px 150px;
+    background-color: #FF17365D;
+    color: rgb(255, 255, 255);
+}</string>
+            </property>
+            <property name="title">
+             <string>Данные:</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_lot_count">
+               <property name="font">
+                <font>
+                 <pointsize>40</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white</string>
+               </property>
+               <property name="text">
+                <string>Лот: 1200 шт</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_sn_counts">
+               <property name="font">
+                <font>
+                 <pointsize>40</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: white</string>
+               </property>
+               <property name="text">
+                <string>Сравнение: 2 столба</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_last_sn">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox {
+    border: 1px solid gray;
+    border-color: none;
+    margin-top: 60px;
+    font-size: 40px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px 150px;
+    background-color: #FF17365D;
+    color: rgb(255, 255, 255);
+}</string>
+        </property>
+        <property name="title">
+         <string>Последний удачный SN</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_last_sn">
+           <property name="font">
+            <font>
+             <pointsize>40</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>SN: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_input_sn">
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: white</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="maxLength">
+           <number>80</number>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+          <property name="dragEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="placeholderText">
+           <string notr="true">Введите SN:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>33</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menu">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1430</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menu_2">
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Настройки</string>
+    </property>
+    <addaction name="action_set_config"/>
+   </widget>
+   <addaction name="menu_2"/>
+  </widget>
+  <action name="action_new_project">
+   <property name="text">
+    <string>Создать новый проект</string>
+   </property>
+  </action>
+  <action name="action_open">
+   <property name="text">
+    <string>Открыть проект</string>
+   </property>
+  </action>
+  <action name="action_close">
+   <property name="text">
+    <string>Закрыть проект</string>
+   </property>
+  </action>
+  <action name="action_set_parameters">
+   <property name="text">
+    <string>Задать параметры проекта</string>
+   </property>
+  </action>
+  <action name="action_set_default_parameters">
+   <property name="text">
+    <string>Сбросить параметры по умолчанию</string>
+   </property>
+  </action>
+  <action name="action_saveas">
+   <property name="text">
+    <string>Сохранить в финальный вид</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="text">
+    <string>Информация о лоте</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="action_instruction">
+   <property name="text">
+    <string>Инструкция</string>
+   </property>
+  </action>
+  <action name="action_about_programs">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="action_info">
+   <property name="text">
+    <string>Инструкция</string>
+   </property>
+  </action>
+  <action name="action_set_config">
+   <property name="text">
+    <string>Задать настройки</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
