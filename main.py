@@ -18,7 +18,7 @@ from CExcelLog import CExcelLog
 # pyside6-rcc .\ui\res.qrc -o .\ui\res_rc.py
 # Press the green button in the gutter to run the script.
 
-STANDART_SN_TEXT = 'SN: XXXXXXXXXXXXXXXXXXXXXXXXXXX'
+STANDART_SN_TEXT = 'SN: XXXXXXXXXX'
 
 
 class MainWindow(QMainWindow):
@@ -58,10 +58,16 @@ class MainWindow(QMainWindow):
             clear_text = text.upper().replace(" ", "")
             if 6 < len(clear_text) < 64:
                 if Settings.is_valid_sn(clear_text):
+                    last_sn_string = InputBuffer.get_compare_string()
+
                     result = InputBuffer.set_comare(clear_text)
                     match result:
                         case COMPARED_RESULT.COMPARED_FAIL:
-                            self.set_last_sn(clear_text, '#ff0404')
+                            if last_sn_string != "":
+                                self.set_last_sn(last_sn_string, '#ff0404')
+                            else:
+                                self.set_last_sn(clear_text, '#ff0404')
+
                         case COMPARED_RESULT.COMPARED_SUCCESS:
                             self.set_last_sn(clear_text, '#4afc44')
                             result = CExcelLog.print_log(
@@ -300,6 +306,10 @@ class InputBuffer:
     @classmethod
     def is_in_compare(cls) -> bool:
         return True if cls.checked_string != "" else False
+
+    @classmethod
+    def get_compare_string(cls) -> str:
+        return cls.checked_string
 
 
 if __name__ == '__main__':

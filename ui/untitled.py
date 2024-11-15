@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'untitled.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.7.2
+## Created by: Qt User Interface Compiler version 6.8.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1430, 812)
+        MainWindow.resize(1760, 955)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -94,80 +94,19 @@ class Ui_MainWindow(object):
         self.action_set_config.setFont(font)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout_7 = QVBoxLayout(self.centralwidget)
+        self.verticalLayout_8 = QVBoxLayout(self.centralwidget)
+        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
+        self.verticalLayout_7 = QVBoxLayout()
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
-        self.verticalLayout_6 = QVBoxLayout()
-        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.verticalLayout_6.addItem(self.verticalSpacer_4)
-
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout.addItem(self.horizontalSpacer_5)
-
-        self.groupBox_model = QGroupBox(self.centralwidget)
-        self.groupBox_model.setObjectName(u"groupBox_model")
-        font1 = QFont()
-        self.groupBox_model.setFont(font1)
-        self.groupBox_model.setStyleSheet(u"QGroupBox {\n"
-"    border: 1px solid gray;\n"
-"    border-color: none;\n"
-"    margin-top: 60px;\n"
-"    font-size: 40px;\n"
-"    border-bottom-left-radius: 15px;\n"
-"    border-bottom-right-radius: 15px;\n"
-"}\n"
-"\n"
-"QGroupBox::title {\n"
-"    subcontrol-origin: margin;\n"
-"    subcontrol-position: top center;\n"
-"    border-top-left-radius: 15px;\n"
-"    border-top-right-radius: 15px;\n"
-"    padding: 5px 150px;\n"
-"    background-color: #FF17365D;\n"
-"    color: rgb(255, 255, 255);\n"
-"}")
-        self.groupBox_model.setFlat(False)
-        self.verticalLayout_2 = QVBoxLayout(self.groupBox_model)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout = QVBoxLayout()
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.label_vender = QLabel(self.groupBox_model)
-        self.label_vender.setObjectName(u"label_vender")
-        font2 = QFont()
-        font2.setPointSize(60)
-        font2.setBold(True)
-        self.label_vender.setFont(font2)
-        self.label_vender.setStyleSheet(u"color: white")
-        self.label_vender.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.verticalLayout.addWidget(self.label_vender)
-
-        self.label_model = QLabel(self.groupBox_model)
-        self.label_model.setObjectName(u"label_model")
-        self.label_model.setFont(font2)
-        self.label_model.setStyleSheet(u"color: white")
-        self.label_model.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.verticalLayout.addWidget(self.label_model)
-
-
-        self.verticalLayout_2.addLayout(self.verticalLayout)
-
-
-        self.horizontalLayout.addWidget(self.groupBox_model)
-
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout.addItem(self.horizontalSpacer)
-
         self.verticalLayout_4 = QVBoxLayout()
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.horizontalLayout_5 = QHBoxLayout()
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.groupBox_date = QGroupBox(self.centralwidget)
         self.groupBox_date.setObjectName(u"groupBox_date")
+        font1 = QFont()
         self.groupBox_date.setFont(font1)
         self.groupBox_date.setStyleSheet(u"QGroupBox {\n"
 "    border: 1px solid gray;\n"
@@ -191,122 +130,150 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.label_date = QLabel(self.groupBox_date)
         self.label_date.setObjectName(u"label_date")
-        font3 = QFont()
-        font3.setPointSize(40)
-        font3.setBold(True)
-        self.label_date.setFont(font3)
+        font2 = QFont()
+        font2.setPointSize(40)
+        font2.setBold(True)
+        self.label_date.setFont(font2)
         self.label_date.setStyleSheet(u"color: white")
         self.label_date.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.label_date)
 
 
-        self.verticalLayout_4.addWidget(self.groupBox_date)
+        self.horizontalLayout.addWidget(self.groupBox_date)
 
-        self.groupBox = QGroupBox(self.centralwidget)
-        self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setFont(font1)
-        self.groupBox.setStyleSheet(u"QGroupBox {\n"
-"    border: 1px solid gray;\n"
-"    border-color: none;\n"
-"    margin-top: 60px;\n"
-"    font-size: 40px;\n"
-"    border-bottom-left-radius: 15px;\n"
-"    border-bottom-right-radius: 15px;\n"
-"}\n"
-"\n"
-"QGroupBox::title {\n"
-"    subcontrol-origin: margin;\n"
-"    subcontrol-position: top center;\n"
-"    border-top-left-radius: 15px;\n"
-"    border-top-right-radius: 15px;\n"
-"    padding: 5px 150px;\n"
-"    background-color: #FF17365D;\n"
-"    color: rgb(255, 255, 255);\n"
-"}")
-        self.verticalLayout_5 = QVBoxLayout(self.groupBox)
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.label_lot_count = QLabel(self.groupBox)
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout.addItem(self.horizontalSpacer)
+
+
+        self.horizontalLayout_5.addLayout(self.horizontalLayout)
+
+        self.verticalLayout_2 = QVBoxLayout()
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.horizontalLayout_4 = QHBoxLayout()
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.label_lot_count = QLabel(self.centralwidget)
         self.label_lot_count.setObjectName(u"label_lot_count")
+        font3 = QFont()
+        font3.setPointSize(50)
+        font3.setBold(True)
         self.label_lot_count.setFont(font3)
         self.label_lot_count.setStyleSheet(u"color: white")
         self.label_lot_count.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.verticalLayout_5.addWidget(self.label_lot_count)
+        self.horizontalLayout_4.addWidget(self.label_lot_count)
 
-        self.label_sn_counts = QLabel(self.groupBox)
+        self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout_4.addItem(self.horizontalSpacer_6)
+
+        self.label_sn_counts = QLabel(self.centralwidget)
         self.label_sn_counts.setObjectName(u"label_sn_counts")
         self.label_sn_counts.setFont(font3)
         self.label_sn_counts.setStyleSheet(u"color: white")
         self.label_sn_counts.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.verticalLayout_5.addWidget(self.label_sn_counts)
-
-
-        self.verticalLayout_4.addWidget(self.groupBox)
-
-
-        self.horizontalLayout.addLayout(self.verticalLayout_4)
+        self.horizontalLayout_4.addWidget(self.label_sn_counts)
 
         self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
-        self.horizontalLayout.addItem(self.horizontalSpacer_4)
+        self.horizontalLayout_4.addItem(self.horizontalSpacer_4)
 
 
-        self.verticalLayout_6.addLayout(self.horizontalLayout)
+        self.verticalLayout_2.addLayout(self.horizontalLayout_4)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.verticalLayout_6.addItem(self.verticalSpacer_2)
+        self.verticalLayout_2.addItem(self.verticalSpacer_4)
 
-        self.groupBox_last_sn = QGroupBox(self.centralwidget)
-        self.groupBox_last_sn.setObjectName(u"groupBox_last_sn")
-        self.groupBox_last_sn.setFont(font1)
-        self.groupBox_last_sn.setStyleSheet(u"QGroupBox {\n"
-"    border: 1px solid gray;\n"
-"    border-color: none;\n"
-"    margin-top: 60px;\n"
-"    font-size: 40px;\n"
-"    border-bottom-left-radius: 15px;\n"
-"    border-bottom-right-radius: 15px;\n"
-"}\n"
-"\n"
-"QGroupBox::title {\n"
-"    subcontrol-origin: margin;\n"
-"    subcontrol-position: top center;\n"
-"    border-top-left-radius: 15px;\n"
-"    border-top-right-radius: 15px;\n"
-"    padding: 5px 150px;\n"
-"    background-color: #FF17365D;\n"
-"    color: rgb(255, 255, 255);\n"
-"}")
-        self.horizontalLayout_2 = QHBoxLayout(self.groupBox_last_sn)
+
+        self.horizontalLayout_5.addLayout(self.verticalLayout_2)
+
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout_5)
+
+        self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.label_last_sn = QLabel(self.groupBox_last_sn)
+        self.verticalLayout = QVBoxLayout()
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.label_vender = QLabel(self.centralwidget)
+        self.label_vender.setObjectName(u"label_vender")
+        font4 = QFont()
+        font4.setPointSize(70)
+        font4.setBold(True)
+        self.label_vender.setFont(font4)
+        self.label_vender.setStyleSheet(u"color: white")
+        self.label_vender.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout.addWidget(self.label_vender)
+
+        self.label_model = QLabel(self.centralwidget)
+        self.label_model.setObjectName(u"label_model")
+        font5 = QFont()
+        font5.setPointSize(60)
+        font5.setBold(True)
+        self.label_model.setFont(font5)
+        self.label_model.setStyleSheet(u"color: white")
+        self.label_model.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout.addWidget(self.label_model)
+
+
+        self.horizontalLayout_2.addLayout(self.verticalLayout)
+
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout_2)
+
+
+        self.verticalLayout_7.addLayout(self.verticalLayout_4)
+
+        self.verticalLayout_6 = QVBoxLayout()
+        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.label_last_sn = QLabel(self.centralwidget)
         self.label_last_sn.setObjectName(u"label_last_sn")
-        self.label_last_sn.setFont(font3)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Maximum)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.label_last_sn.sizePolicy().hasHeightForWidth())
+        self.label_last_sn.setSizePolicy(sizePolicy1)
+        self.label_last_sn.setMinimumSize(QSize(0, 200))
+        self.label_last_sn.setBaseSize(QSize(0, 0))
+        font6 = QFont()
+        font6.setFamilies([u"Times New Roman"])
+        font6.setPointSize(70)
+        font6.setBold(True)
+        self.label_last_sn.setFont(font6)
+#if QT_CONFIG(accessibility)
+        self.label_last_sn.setAccessibleDescription(u"")
+#endif // QT_CONFIG(accessibility)
+        self.label_last_sn.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.label_last_sn.setStyleSheet(u"")
+        self.label_last_sn.setTextFormat(Qt.TextFormat.AutoText)
+        self.label_last_sn.setScaledContents(False)
         self.label_last_sn.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_last_sn.setWordWrap(True)
+        self.label_last_sn.setMargin(10)
+        self.label_last_sn.setIndent(10)
 
-        self.horizontalLayout_2.addWidget(self.label_last_sn)
+        self.verticalLayout_6.addWidget(self.label_last_sn)
 
 
-        self.verticalLayout_6.addWidget(self.groupBox_last_sn)
+        self.verticalLayout_7.addLayout(self.verticalLayout_6)
 
+        self.verticalLayout_5 = QVBoxLayout()
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.verticalLayout_6.addItem(self.verticalSpacer_3)
+        self.verticalLayout_5.addItem(self.verticalSpacer_3)
 
         self.horizontalLayout_3 = QHBoxLayout()
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout_3.addItem(self.horizontalSpacer_2)
-
         self.lineEdit_input_sn = QLineEdit(self.centralwidget)
         self.lineEdit_input_sn.setObjectName(u"lineEdit_input_sn")
-        font4 = QFont()
-        font4.setPointSize(25)
-        self.lineEdit_input_sn.setFont(font4)
+        font7 = QFont()
+        font7.setPointSize(40)
+        self.lineEdit_input_sn.setFont(font7)
         self.lineEdit_input_sn.setStyleSheet(u"background-color: white")
         self.lineEdit_input_sn.setMaxLength(80)
         self.lineEdit_input_sn.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -315,31 +282,30 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_3.addWidget(self.lineEdit_input_sn)
 
-        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
-        self.horizontalLayout_3.addItem(self.horizontalSpacer_3)
-
-
-        self.verticalLayout_6.addLayout(self.horizontalLayout_3)
-
-
-        self.verticalLayout_7.addLayout(self.verticalLayout_6)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_3)
 
         self.verticalSpacer = QSpacerItem(20, 33, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
-        self.verticalLayout_7.addItem(self.verticalSpacer)
+        self.verticalLayout_5.addItem(self.verticalSpacer)
+
+
+        self.verticalLayout_7.addLayout(self.verticalLayout_5)
+
+
+        self.verticalLayout_8.addLayout(self.verticalLayout_7)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menu = QMenuBar(MainWindow)
         self.menu.setObjectName(u"menu")
-        self.menu.setGeometry(QRect(0, 0, 1430, 42))
-        font5 = QFont()
-        font5.setPointSize(20)
-        self.menu.setFont(font5)
+        self.menu.setGeometry(QRect(0, 0, 1760, 42))
+        font8 = QFont()
+        font8.setPointSize(20)
+        self.menu.setFont(font8)
         self.menu.setDefaultUp(False)
         self.menu_2 = QMenu(self.menu)
         self.menu_2.setObjectName(u"menu_2")
-        self.menu_2.setFont(font5)
+        self.menu_2.setFont(font8)
         MainWindow.setMenuBar(self.menu)
 
         self.menu.addAction(self.menu_2.menuAction())
@@ -364,17 +330,14 @@ class Ui_MainWindow(object):
         self.action_about_programs.setText(QCoreApplication.translate("MainWindow", u"\u041e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0435", None))
         self.action_info.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f", None))
         self.action_set_config.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0434\u0430\u0442\u044c \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
-        self.groupBox_model.setTitle(QCoreApplication.translate("MainWindow", u"\u0423\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e", None))
-        self.label_vender.setText(QCoreApplication.translate("MainWindow", u"TV Hartens", None))
-        self.label_model.setText(QCoreApplication.translate("MainWindow", u"HTM-55UHD05B-S2 UK", None))
         self.groupBox_date.setTitle(QCoreApplication.translate("MainWindow", u"\u0414\u0430\u0442\u0430", None))
         self.label_date.setText(QCoreApplication.translate("MainWindow", u"12.11.2024\n"
 "09:17:21", None))
-        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"\u0414\u0430\u043d\u043d\u044b\u0435:", None))
         self.label_lot_count.setText(QCoreApplication.translate("MainWindow", u"\u041b\u043e\u0442: 1200 \u0448\u0442", None))
         self.label_sn_counts.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435: 2 \u0441\u0442\u043e\u043b\u0431\u0430", None))
-        self.groupBox_last_sn.setTitle(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0438\u0439 \u0443\u0434\u0430\u0447\u043d\u044b\u0439 SN", None))
-        self.label_last_sn.setText(QCoreApplication.translate("MainWindow", u"SN: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", None))
+        self.label_vender.setText(QCoreApplication.translate("MainWindow", u"TV Hartens", None))
+        self.label_model.setText(QCoreApplication.translate("MainWindow", u"HTM-55UHD05B-S2 UK", None))
+        self.label_last_sn.setText(QCoreApplication.translate("MainWindow", u"SN: XXXXXXXXXXXXXXXXXXXXXXXXXXX", None))
         self.lineEdit_input_sn.setText("")
         self.menu_2.setTitle(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
     # retranslateUi
