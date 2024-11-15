@@ -31,7 +31,7 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         QFontDatabase.addApplicationFont("designs/Iosevka Bold.ttf")
-        self.setWindowTitle(f'Packing Scan Logging 2024 v0.1')
+        self.setWindowTitle(f'Packing Scan Logging 2024 KVANT v0.1b')
 
         self.timer = QTimer()
         self.timer.timeout.connect(self.set_update_current_time)
@@ -159,6 +159,15 @@ class SettingsWindow(QMainWindow):
                              title="Ошибка",
                              variant_yes="Ок", variant_no="", callback=None)
             self.set_model(ERROR_LABEL)
+            return
+
+        if model == vendor:
+            send_message_box(icon_style=SMBOX_ICON_TYPE.ICON_ERROR,
+                             text=f"Vendor и Model не должны быть одинаковы!",
+                             title="Ошибка",
+                             variant_yes="Ок", variant_no="", callback=None)
+            self.set_model(ERROR_LABEL)
+            self.set_vender(ERROR_LABEL)
             return
 
         count_int: int = Settings.convert_data_to_int(count)

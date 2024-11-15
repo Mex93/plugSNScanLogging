@@ -7,6 +7,7 @@ import re
 
 from enuuuums import SMBOX_ICON_TYPE
 
+
 def send_message_box(icon_style, text: str, title: str, variant_yes: str, variant_no: str, callback=None):
     msg = QMessageBox()
     msg.setWindowTitle(title)
