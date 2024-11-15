@@ -69,7 +69,7 @@ class MainWindow(QMainWindow):
                                 self.set_last_sn(clear_text, '#ff0404')
 
                         case COMPARED_RESULT.COMPARED_SUCCESS:
-                            self.set_last_sn(clear_text, '#4afc44')
+                            self.set_last_sn(clear_text, '#40ff22')
                             result = CExcelLog.print_log(
                                 model=Settings.get_model(),
                                 vender=Settings.get_vender(),

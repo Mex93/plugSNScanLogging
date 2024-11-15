@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(u"QMainWindow \n"
 "{\n"
-"	background-color: #2137fb;\n"
+"	background-color: #192483;\n"
 "}\n"
 "\n"
 "QMenuBar\n"
@@ -241,7 +241,7 @@ class Ui_MainWindow(object):
         self.label_last_sn.setBaseSize(QSize(0, 0))
         font6 = QFont()
         font6.setFamilies([u"Times New Roman"])
-        font6.setPointSize(70)
+        font6.setPointSize(77)
         font6.setBold(True)
         self.label_last_sn.setFont(font6)
 #if QT_CONFIG(accessibility)

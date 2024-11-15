@@ -32,7 +32,7 @@
   <property name="styleSheet">
    <string notr="true">QMainWindow 
 {
-	background-color: #2137fb;
+	background-color: #192483;
 }
 
 QMenuBar
@@ -300,7 +300,7 @@ QGroupBox::title {
           <property name="font">
            <font>
             <family>Times New Roman</family>
-            <pointsize>70</pointsize>
+            <pointsize>77</pointsize>
             <bold>true</bold>
            </font>
           </property>
