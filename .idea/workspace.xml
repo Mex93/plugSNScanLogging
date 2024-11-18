@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b1f0fe-ec30-4893-85d8-7f56738d5c0d" name="Changes" comment="added last data log and up font size">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CExcelLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/CExcelLog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSettings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSettings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/untitled.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/untitled.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/untitled.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/untitled.ui" afterDir="false" />
-    </list>
+    <list default="true" id="b2b1f0fe-ec30-4893-85d8-7f56738d5c0d" name="Changes" comment="added black style replaced #192483, &#10;added current scanned lot count&#10;added fullscreen mode and buttom in control panel for exit from app" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,13 +187,30 @@
       <option name="project" value="LOCAL" />
       <updated>1731915134247</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added black style replaced #192483, &#10;added current scanned lot count&#10;added fullscreen mode and buttom in control panel for exit from app">
+      <option name="closed" value="true" />
+      <created>1731926275125</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731926275125</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added black style replaced #192483, &#10;added current scanned lot count&#10;added fullscreen mode and buttom in control panel for exit from app">
+      <option name="closed" value="true" />
+      <created>1731926404219</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731926404219</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="alpha" />
     <MESSAGE value="added last data log" />
     <MESSAGE value="added last data log and up font size" />
-    <option name="LAST_COMMIT_MESSAGE" value="added last data log and up font size" />
+    <MESSAGE value="added black style replaced #192483, &#10;added current scanned lot count&#10;added fullscreen mode and buttom in control panel for exit from app" />
+    <option name="LAST_COMMIT_MESSAGE" value="added black style replaced #192483, &#10;added current scanned lot count&#10;added fullscreen mode and buttom in control panel for exit from app" />
   </component>
 </project>

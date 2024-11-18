@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(u"QMainWindow \n"
 "{\n"
-"	background-color: #000000;\n"
+"	background-color: #192483;\n"
 "}\n"
 "\n"
 "QMenuBar\n"
@@ -220,7 +220,7 @@ class Ui_MainWindow(object):
         self.label_last_sn.setAccessibleDescription(u"")
 #endif // QT_CONFIG(accessibility)
         self.label_last_sn.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.label_last_sn.setStyleSheet(u"color: white")
+        self.label_last_sn.setStyleSheet(u"")
         self.label_last_sn.setTextFormat(Qt.TextFormat.AutoText)
         self.label_last_sn.setScaledContents(False)
         self.label_last_sn.setAlignment(Qt.AlignmentFlag.AlignCenter)

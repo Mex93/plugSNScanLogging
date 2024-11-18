@@ -32,7 +32,7 @@
   <property name="styleSheet">
    <string notr="true">QMainWindow 
 {
-	background-color: #000000;
+	background-color: #192483;
 }
 
 QMenuBar
@@ -239,7 +239,7 @@ QMenu::item::selected
            <enum>Qt::LayoutDirection::LeftToRight</enum>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: white</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>SN: 2409BHQ219235C00559</string>
