@@ -75,7 +75,8 @@ QMenu::item::selected
              <widget class="QLabel" name="label_date">
               <property name="font">
                <font>
-                <pointsize>90</pointsize>
+                <family>Times New Roman</family>
+                <pointsize>100</pointsize>
                 <bold>true</bold>
                </font>
               </property>
@@ -162,7 +163,7 @@ QMenu::item::selected
              <widget class="QLabel" name="label_vender">
               <property name="font">
                <font>
-                <pointsize>80</pointsize>
+                <pointsize>75</pointsize>
                 <bold>true</bold>
                </font>
               </property>
@@ -181,7 +182,7 @@ QMenu::item::selected
              <widget class="QLabel" name="label_model">
               <property name="font">
                <font>
-                <pointsize>75</pointsize>
+                <pointsize>77</pointsize>
                 <bold>true</bold>
                </font>
               </property>
@@ -207,7 +208,7 @@ QMenu::item::selected
         <item>
          <widget class="QLabel" name="label_last_sn">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
