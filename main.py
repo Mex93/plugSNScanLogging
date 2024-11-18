@@ -146,7 +146,7 @@ class SettingsWindow(QMainWindow):
         if not Settings.is_vendor_valid(vendor):
             send_message_box(icon_style=SMBOX_ICON_TYPE.ICON_ERROR,
                              text=f"Неверно задан Vendor устройства.\n\n"
-                                  f"REGEX: '^[A-Za-z0-9 -|/]+$'",
+                                  f"REGEX: 'A-Za-z0-9 .|/|\\",
                              title="Ошибка",
                              variant_yes="Ок", variant_no="", callback=None)
             self.set_vender(ERROR_LABEL)
@@ -155,7 +155,7 @@ class SettingsWindow(QMainWindow):
         if not Settings.is_model_valid(model):
             send_message_box(icon_style=SMBOX_ICON_TYPE.ICON_ERROR,
                              text=f"Неверно задана Model устройства.\n\n"
-                                  f"REGEX: '^[A-Za-z0-9а-яА-Я ._-|/]+$'",
+                                  f"REGEX: 'A-Za-z0-9а-яА-Я .|/|\\",
                              title="Ошибка",
                              variant_yes="Ок", variant_no="", callback=None)
             self.set_model(ERROR_LABEL)
