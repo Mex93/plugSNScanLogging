@@ -34,6 +34,7 @@ class MainWindow(QMainWindow):
         QFontDatabase.addApplicationFont("designs/Iosevka Bold.ttf")
         self.setWindowTitle(f'Packing Scan Logging 2024 KVANT v0.1b')
 
+        self.scanned_in_lot = 0
         self.config = CConfig()
         try:
             self.config.load_data()
@@ -51,7 +52,11 @@ class MainWindow(QMainWindow):
         self.set_default()
 
         self.ui.action_set_config.triggered.connect(self.on_user_open_config)
+        self.ui.action_exit.triggered.connect(self.on_user_close_app)
         self.ui.lineEdit_input_sn.returnPressed.connect(self.on_user_input_sn)
+
+    def on_user_close_app(self):
+        self.set_close()
 
     def on_user_input_sn(self):
         text = self.ui.lineEdit_input_sn.text()
@@ -75,8 +80,11 @@ class MainWindow(QMainWindow):
                                 model=Settings.get_model(),
                                 vender=Settings.get_vender(),
                                 sn=clear_text)
+
                             if not result:
                                 self.set_last_sn(clear_text, 'red')
+                            else:
+                                self.add_scanned_count(1)
 
                         case COMPARED_RESULT.COMPARED_IS_SUCCESS_PROGRESS:
                             self.set_last_sn(clear_text, '#fff335')
@@ -88,12 +96,23 @@ class MainWindow(QMainWindow):
     def on_user_open_config(self):
         self.settings_window.set_show(True)
 
+    def add_scanned_count(self, ccount_add: int):
+        self.set_add_count(self.scanned_in_lot+ccount_add)
+
+    def set_add_count(self, ccount: int):
+        self.scanned_in_lot = ccount
+        self.update_current_scans_count()
+
+    def update_current_scans_count(self):
+        self.ui.label_sn_counts.setText(f'~ {self.scanned_in_lot} шт')
+
     def set_default(self):
         self.set_model("-")
         self.set_vender("-")
         self.set_lot_count("0")
         self.set_sns("-")
         self.set_last_sn(STANDART_SN_TEXT, color='black')
+        self.set_add_count(0)
 
     def set_close(self):
         self.settings_window.close()
@@ -109,7 +128,8 @@ class MainWindow(QMainWindow):
         self.ui.label_lot_count.setText(f'Лот: {text} шт')
 
     def set_sns(self, text: str) -> None:
-        self.ui.label_sn_counts.setText(f'Сравнение: {text}')
+        # self.ui.label_sn_counts.setText(f'{text}')
+        pass
 
     def set_last_sn(self, text: str, color: str) -> None:
         self.ui.label_last_sn.setText(text)
@@ -146,7 +166,7 @@ class SettingsWindow(QMainWindow):
         if not Settings.is_vendor_valid(vendor):
             send_message_box(icon_style=SMBOX_ICON_TYPE.ICON_ERROR,
                              text=f"Неверно задан Vendor устройства.\n\n"
-                                  f"REGEX: 'A-Za-z0-9 .|/|\\",
+                                  f"REGEX: 'A-Za-z0-9 .-|/|\\",
                              title="Ошибка",
                              variant_yes="Ок", variant_no="", callback=None)
             self.set_vender(ERROR_LABEL)
@@ -155,7 +175,7 @@ class SettingsWindow(QMainWindow):
         if not Settings.is_model_valid(model):
             send_message_box(icon_style=SMBOX_ICON_TYPE.ICON_ERROR,
                              text=f"Неверно задана Model устройства.\n\n"
-                                  f"REGEX: 'A-Za-z0-9а-яА-Я .|/|\\",
+                                  f"REGEX: 'A-Za-z0-9а-яА-Я .-|/|\\",
                              title="Ошибка",
                              variant_yes="Ок", variant_no="", callback=None)
             self.set_model(ERROR_LABEL)
@@ -228,6 +248,9 @@ class SettingsWindow(QMainWindow):
         self.main_window.config.set_lvender(vendor)
         self.main_window.config.set_ldevice(model)
         self.main_window.config.set_lcount(count)
+
+        scanned_count = CExcelLog.get_scanned_count(vendor, model)
+        self.main_window.set_add_count(scanned_count)
 
         self.close()
 
@@ -325,6 +348,6 @@ class InputBuffer:
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = MainWindow()
-    window.show()
+    window.showFullScreen()
 
     sys.exit(app.exec())

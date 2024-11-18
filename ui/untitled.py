@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(u"QMainWindow \n"
 "{\n"
-"	background-color: #192483;\n"
+"	background-color: #000000;\n"
 "}\n"
 "\n"
 "QMenuBar\n"
@@ -89,9 +89,16 @@ class Ui_MainWindow(object):
         self.action_info.setObjectName(u"action_info")
         self.action_set_config = QAction(MainWindow)
         self.action_set_config.setObjectName(u"action_set_config")
+        icon1 = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.DocumentProperties))
+        self.action_set_config.setIcon(icon1)
         font = QFont()
         font.setPointSize(24)
         self.action_set_config.setFont(font)
+        self.action_exit = QAction(MainWindow)
+        self.action_exit.setObjectName(u"action_exit")
+        icon2 = QIcon()
+        icon2.addFile(u":/res/images/select_window_closed.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.action_exit.setIcon(icon2)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout_8 = QVBoxLayout(self.centralwidget)
@@ -206,14 +213,14 @@ class Ui_MainWindow(object):
         self.label_last_sn.setBaseSize(QSize(0, 0))
         font6 = QFont()
         font6.setFamilies([u"Times New Roman"])
-        font6.setPointSize(90)
+        font6.setPointSize(70)
         font6.setBold(True)
         self.label_last_sn.setFont(font6)
 #if QT_CONFIG(accessibility)
         self.label_last_sn.setAccessibleDescription(u"")
 #endif // QT_CONFIG(accessibility)
         self.label_last_sn.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.label_last_sn.setStyleSheet(u"")
+        self.label_last_sn.setStyleSheet(u"color: white")
         self.label_last_sn.setTextFormat(Qt.TextFormat.AutoText)
         self.label_last_sn.setScaledContents(False)
         self.label_last_sn.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -275,6 +282,7 @@ class Ui_MainWindow(object):
 
         self.menu.addAction(self.menu_2.menuAction())
         self.menu_2.addAction(self.action_set_config)
+        self.menu_2.addAction(self.action_exit)
 
         self.retranslateUi(MainWindow)
 
@@ -294,11 +302,12 @@ class Ui_MainWindow(object):
         self.action_instruction.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f", None))
         self.action_about_programs.setText(QCoreApplication.translate("MainWindow", u"\u041e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0435", None))
         self.action_info.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f", None))
-        self.action_set_config.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0434\u0430\u0442\u044c \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
+        self.action_set_config.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
+        self.action_exit.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u043a\u0440\u044b\u0442\u044c", None))
         self.label_date.setText(QCoreApplication.translate("MainWindow", u"12.11.2024\n"
 "09:17:21", None))
         self.label_lot_count.setText(QCoreApplication.translate("MainWindow", u"\u041b\u043e\u0442: 1200 \u0448\u0442", None))
-        self.label_sn_counts.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435: 2 SN", None))
+        self.label_sn_counts.setText(QCoreApplication.translate("MainWindow", u"~ 0 \u0448\u0442", None))
         self.label_vender.setText(QCoreApplication.translate("MainWindow", u"TV Hartens", None))
         self.label_model.setText(QCoreApplication.translate("MainWindow", u"HTM-55UHD05B-S2 UK", None))
         self.label_last_sn.setText(QCoreApplication.translate("MainWindow", u"SN: 2409BHQ219235C00559", None))

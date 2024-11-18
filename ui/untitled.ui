@@ -32,7 +32,7 @@
   <property name="styleSheet">
    <string notr="true">QMainWindow 
 {
-	background-color: #192483;
+	background-color: #000000;
 }
 
 QMenuBar
@@ -131,7 +131,7 @@ QMenu::item::selected
                <string notr="true">color: white</string>
               </property>
               <property name="text">
-               <string>Сравнение: 2 SN</string>
+               <string>~ 0 шт</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -228,7 +228,7 @@ QMenu::item::selected
           <property name="font">
            <font>
             <family>Times New Roman</family>
-            <pointsize>90</pointsize>
+            <pointsize>70</pointsize>
             <bold>true</bold>
            </font>
           </property>
@@ -239,7 +239,7 @@ QMenu::item::selected
            <enum>Qt::LayoutDirection::LeftToRight</enum>
           </property>
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">color: white</string>
           </property>
           <property name="text">
            <string>SN: 2409BHQ219235C00559</string>
@@ -358,6 +358,7 @@ QMenu::item::selected
      <string>Настройки</string>
     </property>
     <addaction name="action_set_config"/>
+    <addaction name="action_exit"/>
    </widget>
    <addaction name="menu_2"/>
   </widget>
@@ -417,13 +418,25 @@ QMenu::item::selected
    </property>
   </action>
   <action name="action_set_config">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::DocumentProperties"/>
+   </property>
    <property name="text">
-    <string>Задать настройки</string>
+    <string>Настройки</string>
    </property>
    <property name="font">
     <font>
      <pointsize>24</pointsize>
     </font>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/res/images/select_window_closed.svg</normaloff>:/res/images/select_window_closed.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Закрыть</string>
    </property>
   </action>
  </widget>
