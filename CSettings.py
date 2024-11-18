@@ -69,17 +69,17 @@ class Settings:
 
     @classmethod
     def is_model_sym_valid(cls, text):
-        pattern = r'^[A-Za-z0-9а-яА-Я ._-]+$'
+        pattern = r'^[A-Za-z0-9а-яА-Я .|/|\\]+$'
         return re.match(pattern, text)
 
     @classmethod
     def is_only_latin_and_sym(cls, text):
-        pattern = r'^[A-Za-z0-9]+$'
+        pattern = r'^[A-Za-z0-9 .|/|\\]+$'
         return re.match(pattern, text)
 
     @classmethod
     def is_valid_sn(cls, text):
-        pattern = r'^[A-Za-z0-9*]+$'
+        pattern = r'^[A-Za-z0-9*-]+$'
         return re.match(pattern, text)
 
     @classmethod
