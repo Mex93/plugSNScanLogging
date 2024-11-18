@@ -12,6 +12,7 @@ from ui.settings_menu import Ui_SettingsWindow
 from CSettings import Settings
 from functions import send_message_box, SMBOX_ICON_TYPE
 from CExcelLog import CExcelLog
+from CConfig import CConfig
 
 # pyside6-uic .\ui\untitled.ui -o .\ui\untitled.py
 # pyside6-uic .\ui\settings_menu.ui -o .\ui\settings_menu.py
@@ -33,6 +34,13 @@ class MainWindow(QMainWindow):
         QFontDatabase.addApplicationFont("designs/Iosevka Bold.ttf")
         self.setWindowTitle(f'Packing Scan Logging 2024 KVANT v0.1b')
 
+        self.config = CConfig()
+        try:
+            self.config.load_data()
+        except:
+            self.config.create_config()
+            self.config.load_data()
+
         self.timer = QTimer()
         self.timer.timeout.connect(self.set_update_current_time)
         self.timer.start(1000)
@@ -44,13 +52,6 @@ class MainWindow(QMainWindow):
 
         self.ui.action_set_config.triggered.connect(self.on_user_open_config)
         self.ui.lineEdit_input_sn.returnPressed.connect(self.on_user_input_sn)
-        # self.ui.pushButton_arrow_down.clicked.connect(self.on_user_press_down_btn)
-        # self.ui.pushButton_arrow_up.clicked.connect(self.on_user_press_up_btn)
-        #
-        # self.ui.action_new_project.triggered.connect(self.on_user_clicked_new_project)
-        # self.ui.action_set_parameters.triggered.connect(self.on_user_clicked_config_project)
-        # self.ui.action_open.triggered.connect(self.on_user_focus)
-        # self.set_program_to_default_state()
 
     def on_user_input_sn(self):
         text = self.ui.lineEdit_input_sn.text()
@@ -105,7 +106,7 @@ class MainWindow(QMainWindow):
         self.ui.label_vender.setText(text)
 
     def set_lot_count(self, text: str) -> None:
-        self.ui.label_lot_count.setText(f'Количество в лоте: {text}')
+        self.ui.label_lot_count.setText(f'Лот: {text} шт')
 
     def set_sns(self, text: str) -> None:
         self.ui.label_sn_counts.setText(f'Сравнение: {text}')
@@ -134,13 +135,6 @@ class SettingsWindow(QMainWindow):
         self.main_window = main_window
 
         self.ui.pushButton_set_settings.clicked.connect(self.on_user_press_on_set_setting)
-        # self.ui.pushButton_arrow_down.clicked.connect(self.on_user_press_down_btn)
-        # self.ui.pushButton_arrow_up.clicked.connect(self.on_user_press_up_btn)
-        #
-        # self.ui.action_new_project.triggered.connect(self.on_user_clicked_new_project)
-        # self.ui.action_set_parameters.triggered.connect(self.on_user_clicked_config_project)
-        # self.ui.action_open.triggered.connect(self.on_user_focus)
-        # self.set_program_to_default_state()
 
     def on_user_press_on_set_setting(self):
         vendor: str = self.get_vender()
@@ -231,6 +225,10 @@ class SettingsWindow(QMainWindow):
         if self.main_window.first_load:
             self.main_window.first_load = False
 
+        self.main_window.config.set_lvender(vendor)
+        self.main_window.config.set_ldevice(model)
+        self.main_window.config.set_lcount(count)
+
         self.close()
 
     def set_show(self, show_with_load_old_setting: bool):
@@ -238,6 +236,18 @@ class SettingsWindow(QMainWindow):
             self.set_model(Settings.get_model())
             self.set_vender(Settings.get_vender())
             self.set_lot_count(str(Settings.get_lot_count()))
+        else:
+            old_vender = self.main_window.config.get_lvendor()
+            old_dname = self.main_window.config.get_ldevice()
+            old_count = self.main_window.config.get_lcount()
+
+            if len(old_dname) > 0:
+                self.set_model(old_dname)
+            if len(old_vender) > 0:
+                self.set_vender(old_vender)
+            if len(old_count) > 0:
+                self.set_lot_count(old_count)
+
         self.show()
 
     def set_default(self):

@@ -16,9 +16,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QGroupBox, QHBoxLayout, QLabel,
-    QLineEdit, QMainWindow, QMenu, QMenuBar,
-    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QHBoxLayout, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QSizePolicy,
+    QSpacerItem, QVBoxLayout, QWidget)
 import ui.res_rc
 
 class Ui_MainWindow(object):
@@ -104,47 +104,16 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.groupBox_date = QGroupBox(self.centralwidget)
-        self.groupBox_date.setObjectName(u"groupBox_date")
-        font1 = QFont()
-        self.groupBox_date.setFont(font1)
-        self.groupBox_date.setStyleSheet(u"QGroupBox {\n"
-"    border: 1px solid gray;\n"
-"    border-color: none;\n"
-"    margin-top: 60px;\n"
-"    font-size: 40px;\n"
-"    border-bottom-left-radius: 15px;\n"
-"    border-bottom-right-radius: 15px;\n"
-"}\n"
-"\n"
-"QGroupBox::title {\n"
-"    subcontrol-origin: margin;\n"
-"    subcontrol-position: top center;\n"
-"    border-top-left-radius: 15px;\n"
-"    border-top-right-radius: 15px;\n"
-"    padding: 5px 150px;\n"
-"    background-color: #FF17365D;\n"
-"    color: rgb(255, 255, 255);\n"
-"}")
-        self.verticalLayout_3 = QVBoxLayout(self.groupBox_date)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.label_date = QLabel(self.groupBox_date)
+        self.label_date = QLabel(self.centralwidget)
         self.label_date.setObjectName(u"label_date")
-        font2 = QFont()
-        font2.setPointSize(40)
-        font2.setBold(True)
-        self.label_date.setFont(font2)
+        font1 = QFont()
+        font1.setPointSize(100)
+        font1.setBold(True)
+        self.label_date.setFont(font1)
         self.label_date.setStyleSheet(u"color: white")
         self.label_date.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.verticalLayout_3.addWidget(self.label_date)
-
-
-        self.horizontalLayout.addWidget(self.groupBox_date)
-
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout.addItem(self.horizontalSpacer)
+        self.horizontalLayout.addWidget(self.label_date)
 
 
         self.horizontalLayout_5.addLayout(self.horizontalLayout)
@@ -155,33 +124,25 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.label_lot_count = QLabel(self.centralwidget)
         self.label_lot_count.setObjectName(u"label_lot_count")
-        font3 = QFont()
-        font3.setPointSize(50)
-        font3.setBold(True)
-        self.label_lot_count.setFont(font3)
+        self.label_lot_count.setFont(font1)
         self.label_lot_count.setStyleSheet(u"color: white")
         self.label_lot_count.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.horizontalLayout_4.addWidget(self.label_lot_count)
 
-        self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
-        self.horizontalLayout_4.addItem(self.horizontalSpacer_6)
+        self.verticalLayout_2.addLayout(self.horizontalLayout_4)
 
         self.label_sn_counts = QLabel(self.centralwidget)
         self.label_sn_counts.setObjectName(u"label_sn_counts")
-        self.label_sn_counts.setFont(font3)
+        font2 = QFont()
+        font2.setPointSize(80)
+        font2.setBold(True)
+        self.label_sn_counts.setFont(font2)
         self.label_sn_counts.setStyleSheet(u"color: white")
         self.label_sn_counts.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.horizontalLayout_4.addWidget(self.label_sn_counts)
-
-        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout_4.addItem(self.horizontalSpacer_4)
-
-
-        self.verticalLayout_2.addLayout(self.horizontalLayout_4)
+        self.verticalLayout_2.addWidget(self.label_sn_counts)
 
         self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
@@ -199,10 +160,10 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.label_vender = QLabel(self.centralwidget)
         self.label_vender.setObjectName(u"label_vender")
-        font4 = QFont()
-        font4.setPointSize(70)
-        font4.setBold(True)
-        self.label_vender.setFont(font4)
+        font3 = QFont()
+        font3.setPointSize(90)
+        font3.setBold(True)
+        self.label_vender.setFont(font3)
         self.label_vender.setStyleSheet(u"color: white")
         self.label_vender.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -210,10 +171,7 @@ class Ui_MainWindow(object):
 
         self.label_model = QLabel(self.centralwidget)
         self.label_model.setObjectName(u"label_model")
-        font5 = QFont()
-        font5.setPointSize(60)
-        font5.setBold(True)
-        self.label_model.setFont(font5)
+        self.label_model.setFont(font2)
         self.label_model.setStyleSheet(u"color: white")
         self.label_model.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -239,11 +197,11 @@ class Ui_MainWindow(object):
         self.label_last_sn.setSizePolicy(sizePolicy1)
         self.label_last_sn.setMinimumSize(QSize(0, 200))
         self.label_last_sn.setBaseSize(QSize(0, 0))
-        font6 = QFont()
-        font6.setFamilies([u"Times New Roman"])
-        font6.setPointSize(77)
-        font6.setBold(True)
-        self.label_last_sn.setFont(font6)
+        font4 = QFont()
+        font4.setFamilies([u"Times New Roman"])
+        font4.setPointSize(90)
+        font4.setBold(True)
+        self.label_last_sn.setFont(font4)
 #if QT_CONFIG(accessibility)
         self.label_last_sn.setAccessibleDescription(u"")
 #endif // QT_CONFIG(accessibility)
@@ -271,9 +229,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.lineEdit_input_sn = QLineEdit(self.centralwidget)
         self.lineEdit_input_sn.setObjectName(u"lineEdit_input_sn")
-        font7 = QFont()
-        font7.setPointSize(40)
-        self.lineEdit_input_sn.setFont(font7)
+        font5 = QFont()
+        font5.setPointSize(40)
+        self.lineEdit_input_sn.setFont(font5)
         self.lineEdit_input_sn.setStyleSheet(u"background-color: white")
         self.lineEdit_input_sn.setMaxLength(80)
         self.lineEdit_input_sn.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -299,13 +257,13 @@ class Ui_MainWindow(object):
         self.menu = QMenuBar(MainWindow)
         self.menu.setObjectName(u"menu")
         self.menu.setGeometry(QRect(0, 0, 1760, 42))
-        font8 = QFont()
-        font8.setPointSize(20)
-        self.menu.setFont(font8)
+        font6 = QFont()
+        font6.setPointSize(20)
+        self.menu.setFont(font6)
         self.menu.setDefaultUp(False)
         self.menu_2 = QMenu(self.menu)
         self.menu_2.setObjectName(u"menu_2")
-        self.menu_2.setFont(font8)
+        self.menu_2.setFont(font6)
         MainWindow.setMenuBar(self.menu)
 
         self.menu.addAction(self.menu_2.menuAction())
@@ -330,14 +288,13 @@ class Ui_MainWindow(object):
         self.action_about_programs.setText(QCoreApplication.translate("MainWindow", u"\u041e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0435", None))
         self.action_info.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f", None))
         self.action_set_config.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0434\u0430\u0442\u044c \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
-        self.groupBox_date.setTitle(QCoreApplication.translate("MainWindow", u"\u0414\u0430\u0442\u0430", None))
         self.label_date.setText(QCoreApplication.translate("MainWindow", u"12.11.2024\n"
 "09:17:21", None))
         self.label_lot_count.setText(QCoreApplication.translate("MainWindow", u"\u041b\u043e\u0442: 1200 \u0448\u0442", None))
-        self.label_sn_counts.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435: 2 \u0441\u0442\u043e\u043b\u0431\u0430", None))
+        self.label_sn_counts.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0440\u0430\u0432\u043d\u0435\u043d\u0438\u0435: 2 SN", None))
         self.label_vender.setText(QCoreApplication.translate("MainWindow", u"TV Hartens", None))
         self.label_model.setText(QCoreApplication.translate("MainWindow", u"HTM-55UHD05B-S2 UK", None))
-        self.label_last_sn.setText(QCoreApplication.translate("MainWindow", u"SN: XXXXXXXXXXXXXXXXXXXXXXXXXXX", None))
+        self.label_last_sn.setText(QCoreApplication.translate("MainWindow", u"SN: 2409BHQ219235C00559", None))
         self.lineEdit_input_sn.setText("")
         self.menu_2.setTitle(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
     # retranslateUi

@@ -72,71 +72,24 @@ QMenu::item::selected
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
-             <widget class="QGroupBox" name="groupBox_date">
+             <widget class="QLabel" name="label_date">
               <property name="font">
                <font>
-                <pointsize>-1</pointsize>
+                <pointsize>100</pointsize>
+                <bold>true</bold>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">QGroupBox {
-    border: 1px solid gray;
-    border-color: none;
-    margin-top: 60px;
-    font-size: 40px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-QGroupBox::title {
-    subcontrol-origin: margin;
-    subcontrol-position: top center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    padding: 5px 150px;
-    background-color: #FF17365D;
-    color: rgb(255, 255, 255);
-}</string>
+               <string notr="true">color: white</string>
               </property>
-              <property name="title">
-               <string>Дата</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_3">
-               <item>
-                <widget class="QLabel" name="label_date">
-                 <property name="font">
-                  <font>
-                   <pointsize>40</pointsize>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: white</string>
-                 </property>
-                 <property name="text">
-                  <string>12.11.2024
+              <property name="text">
+               <string>12.11.2024
 09:17:21</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-              </layout>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
              </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
             </item>
            </layout>
           </item>
@@ -148,7 +101,7 @@ QGroupBox::title {
                <widget class="QLabel" name="label_lot_count">
                 <property name="font">
                  <font>
-                  <pointsize>50</pointsize>
+                  <pointsize>100</pointsize>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -163,52 +116,26 @@ QGroupBox::title {
                 </property>
                </widget>
               </item>
-              <item>
-               <spacer name="horizontalSpacer_6">
-                <property name="orientation">
-                 <enum>Qt::Orientation::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_sn_counts">
-                <property name="font">
-                 <font>
-                  <pointsize>50</pointsize>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">color: white</string>
-                </property>
-                <property name="text">
-                 <string>Сравнение: 2 столба</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignmentFlag::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_4">
-                <property name="orientation">
-                 <enum>Qt::Orientation::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
              </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_sn_counts">
+              <property name="font">
+               <font>
+                <pointsize>80</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: white</string>
+              </property>
+              <property name="text">
+               <string>Сравнение: 2 SN</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
             </item>
             <item>
              <spacer name="verticalSpacer_4">
@@ -235,7 +162,7 @@ QGroupBox::title {
              <widget class="QLabel" name="label_vender">
               <property name="font">
                <font>
-                <pointsize>70</pointsize>
+                <pointsize>90</pointsize>
                 <bold>true</bold>
                </font>
               </property>
@@ -254,7 +181,7 @@ QGroupBox::title {
              <widget class="QLabel" name="label_model">
               <property name="font">
                <font>
-                <pointsize>60</pointsize>
+                <pointsize>80</pointsize>
                 <bold>true</bold>
                </font>
               </property>
@@ -300,7 +227,7 @@ QGroupBox::title {
           <property name="font">
            <font>
             <family>Times New Roman</family>
-            <pointsize>77</pointsize>
+            <pointsize>90</pointsize>
             <bold>true</bold>
            </font>
           </property>
@@ -314,7 +241,7 @@ QGroupBox::title {
            <string notr="true"/>
           </property>
           <property name="text">
-           <string>SN: XXXXXXXXXXXXXXXXXXXXXXXXXXX</string>
+           <string>SN: 2409BHQ219235C00559</string>
           </property>
           <property name="textFormat">
            <enum>Qt::TextFormat::AutoText</enum>
