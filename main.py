@@ -26,13 +26,11 @@ class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
 
-        self.__base_program_version = "0.1"
-
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
         QFontDatabase.addApplicationFont("designs/Iosevka Bold.ttf")
-        self.setWindowTitle(f'Packing Scan Logging 2024 KVANT v0.1b')
+        self.setWindowTitle(f'Packing Scan Logging 2024 KVANT v1.0')
 
         self.scanned_in_lot = 0
         self.config = CConfig()
