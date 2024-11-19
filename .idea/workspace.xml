@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b1f0fe-ec30-4893-85d8-7f56738d5c0d" name="Changes" comment="added black style replaced #192483, &#10;added current scanned lot count&#10;added fullscreen mode and buttom in control panel for exit from app" />
+    <list default="true" id="b2b1f0fe-ec30-4893-85d8-7f56738d5c0d" name="Changes" comment="back blue style">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,16 +34,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Ryazanov/PycharmProjects/plugSNScanLogging",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ryazanov/PycharmProjects/plugSNScanLogging&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ryazanov\PycharmProjects\plugSNScanLogging" />
@@ -203,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731926404219</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="back blue style">
+      <option name="closed" value="true" />
+      <created>1731929476613</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731929476613</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -211,6 +221,7 @@
     <MESSAGE value="added last data log" />
     <MESSAGE value="added last data log and up font size" />
     <MESSAGE value="added black style replaced #192483, &#10;added current scanned lot count&#10;added fullscreen mode and buttom in control panel for exit from app" />
-    <option name="LAST_COMMIT_MESSAGE" value="added black style replaced #192483, &#10;added current scanned lot count&#10;added fullscreen mode and buttom in control panel for exit from app" />
+    <MESSAGE value="back blue style" />
+    <option name="LAST_COMMIT_MESSAGE" value="back blue style" />
   </component>
 </project>

@@ -10,12 +10,14 @@ from datetime import datetime
 
 from functions import send_message_box, SMBOX_ICON_TYPE
 
+
 class CExcelLog:
     _full_patch = None
     _file_name = None
     _file_name_in_logging = None
     _on_day_folder_name = None
     _BASE_FOLDER_NAME = "sn_logging_folder"
+    _load_log_data = False
 
     # СТИЛЬ ШРИФТА
     _FONT_HEADER = Font(
@@ -46,8 +48,10 @@ class CExcelLog:
         shrink_to_fit=False,
         indent=0
     )
+
     @classmethod
-    def get_full_patch(cls) -> str: return cls._full_patch
+    def get_full_patch(cls) -> str:
+        return cls._full_patch
 
     @classmethod
     def get_scanned_count(cls, vender: str, model: str) -> int:
@@ -57,24 +61,28 @@ class CExcelLog:
             fpatch = cls.get_full_patch()
 
         if os.path.isfile(fpatch) is True:
-            wb = load_workbook(fpatch)
-            ws = wb.active
-
-            # Укажите индексы столбцов для сравнения (например, A и B)
-            col_a_index = 3  # Это первый столбец (A)
-            col_b_index = 4  # Это второй столбец (B)
-
             count_finded = 0
-            # Чтение значений из столбцов
-            for row in range(1, ws.max_row + 1):  # Начинаем с первой строки
-                in_cell_vender = ws.cell(row=row, column=col_a_index).value
-                in_cell_model = ws.cell(row=row, column=col_b_index).value
-                if in_cell_vender == vender and in_cell_model == model:
-                    count_finded += 1
+            wb = None
+            try:
+                wb = load_workbook(fpatch)
+                ws = wb.active
+                # Укажите индексы столбцов для сравнения (например, A и B)
+                col_a_index = 3  # Это первый столбец (A)
+                col_b_index = 4  # Это второй столбец (B)
 
+                # Чтение значений из столбцов
+                for row in range(1, ws.max_row + 1):  # Начинаем с первой строки
+                    in_cell_vender = ws.cell(row=row, column=col_a_index).value
+                    in_cell_model = ws.cell(row=row, column=col_b_index).value
+                    if in_cell_vender == vender and in_cell_model == model:
+                        count_finded += 1
+            except:
+                pass
+            finally:
+                if wb is not None:
+                    wb.close()
             return count_finded
         return 0
-
 
     @classmethod
     def update_folder_name_vars(cls):
@@ -105,8 +113,10 @@ class CExcelLog:
             if not os.path.isdir(f"{cls._BASE_FOLDER_NAME}/{cls._on_day_folder_name}"):
                 os.mkdir(f"{cls._BASE_FOLDER_NAME}/{cls._on_day_folder_name}" + "/")
 
-            logging.basicConfig(level=logging.INFO, filename=cls._file_name_in_logging, filemode="a",
-                                format="%(asctime)s %(levelname)s %(message)s")
+            if not cls._load_log_data:
+                logging.basicConfig(level=logging.INFO, filename=cls._file_name_in_logging, filemode="a",
+                                    format="%(asctime)s %(levelname)s %(message)s")
+                cls._load_log_data = True
 
             if os.path.exists(cls._full_patch) is False:
                 wb = Workbook()
